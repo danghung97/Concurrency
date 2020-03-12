@@ -2,19 +2,34 @@ package main
 
 import (
 	"log"
+	"os"
 	"time"
-	"runner"
+	"github.com/danghung97/Go-channel/runner/runner"
 )
 
 func main() {
 	log.Println("Starting work.")
 	
-	r = run
+	r := runner.New(3)
+	r.Add(createTask(), createTask(), createTask())
+	
+	if err := r.Start(); err!= nil {
+		switch err {
+		case runner.ErrTimeout:
+			log.Println("Terminating due to timeout.")
+			os.Exit(1)
+		case runner.ErrInterrupt:
+			log.Println("Terminating due to interrupt.")
+			os.Exit(2)
+		}
+	}
+	
+	log.Println("Process ended.")
 }
 
 func createTask() func(int) {
 	return func(id int) {
-		log.Println("Processor - Task #%d.", id)
+		log.Printf("Processor - Task #%d.",id)
 		time.Sleep(time.Duration(id)*time.Second)
 	}
 }
