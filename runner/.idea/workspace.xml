@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="495fa5a1-1009-479c-9996-d77ce51f0f05" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../pooling/pool/pool.go" beforeDir="false" afterPath="$PROJECT_DIR$/../pooling/pool/pool.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +26,7 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../working" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
